@@ -1,0 +1,107 @@
+@import 'reset.css';
+
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+#container {
+  scroll-behavior: smooth;
+  background: #ccc;
+  flex-direction: column;
+  display: flex;
+  /* padding: 1rem 1.25rem; */
+  width: 100%;
+}
+
+#Inicio {
+  min-height: 100vh;
+  background-color:pink;
+}
+
+#Tecnologia {
+  min-height: 100vh;
+  background-color:blue;
+}
+
+#Contacto {
+  min-height: 100vh;
+  background-color:purple;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 72px;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  position: relative;
+}
+.header.header--desplegado {
+  height: 100px;
+}
+.header__title,
+.header__subtitle {
+  margin: 0 0 .5rem;
+}
+.header__menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+.header__menu a {
+  color: #444;
+  font-weight: 900;
+  font-size: 1.2rem;
+  transition: font-size .5s ease;
+}
+.menu__btn {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top:1rem;
+  border: 1px solid black;
+  padding: .5rem;
+}
+.header__menu {
+  opacity: 0;
+  transition: opacity .5s ease .5s;
+}
+.header__menu.header__menu--opacity {
+  opacity: 1;
+}
+.header__menu a:hover{
+  color: #fff;
+  font-size: 1.3rem;
+}
+div{
+  padding: 1rem 1.25rem;
+}
+
+.perfil__foto {
+  margin: 0 auto;
+  position:relative;
+  border-radius:50%;
+  overflow:hidden;
+  border: 1px solid black;
+}
+.perfil__foto figcaption  {
+  position:absolute;
+  opacity:0;
+  text-align:center;
+  top:100%;
+  left:calc(50% - 150px);
+  width:300px;
+  height:80px;
+  font-size:1.5rem;
+  border:1px solid purple;
+  transition: opacity .5s ease, top 1s ease;
+ 
+}
+.perfil__foto:hover figcaption  {
+  opacity:1;
+  top:calc(50% - 40px);
+}
+.perfil__foto_img {
+  width:100%;
+}
